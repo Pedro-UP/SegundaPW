@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LightWeb</title>
+    <!--Diseño para la pagina web el link para poder usar los iconos
+        y las fuentes a usar.-->
+    <link rel="stylesheet" href="css/estilos.css">
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Edu+VIC+WA+NT+Beginner:wght@400;500;600&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+    <!--Comienso de la pagina web-->
+    <header class="header" id="inicio">
+        <!--Este seria la navegacion es decir el menu para seleccionar las-->
+        <img src="img/hamburgesa.svg" alt="" class="hamburguer">
+        <nav class="menu-navegacion">
+            <a href="#inicio">Inicio</a>
+            <a href="#servicio">Servicio</a>
+            <a href="#portafolio">Portafolio</a>
+            <a href="#expertos">Expertos</a>
+            <a href="#contacto">Contacto</a>
+        </nav>
+        <div class="contenedor head">
+            <!--El contenido de la pagina web-->
+            <h1 class="titulo">Aquien Debes De Retar, Impresionar y Superar Es A Uno Mismo</h1>
+            <p class="copy">Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, facere?</p>
+        </div>
+    </header>
+
+    <main>
+        <!--Contenido de Servicios
+            Es decir los servicios que contiene-->
+        <section class="servicio contenedor" id="servicio">
+            <h2 class="subtitulo">Nuestro Servicios</h2>
+            <div class="contenedor-servicio">
+                <img src="img/carretera.jpg" alt="">
+                <div class="checklist-servicios">
+                    <div class="servicios">
+                        <h3 class="n-service"><span class="number">1</span>Diseño Web</h3>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laboriosam, vero assumenda quis eum
+                            nemo commodi perferendis ipsam delectus temporibus neque sint accusantium dolorem, nulla
+                            culpa. Autem non neque id nemo.</p>
+                    </div>
+                    <div class="servicio">
+                        <h3 class="n-service"><span class="number">2</span>Diseño Web</h3>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laboriosam, vero assumenda quis eum
+                            nemo commodi perferendis ipsam delectus temporibus neque sint accusantium dolorem, nulla
+                            culpa. Autem non neque id nemo.</p><br>
+                    </div>
+                    <div class="servicio">
+                        <h3 class="n-service"><span class="number">3</span>Diseño Web</h3>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laboriosam, vero assumenda quis eum
+                            nemo commodi perferendis ipsam delectus temporibus neque sint accusantium dolorem, nulla
+                            culpa. Autem non neque id nemo.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--Contenido de Portafolio-->
+        <!--Practicamente una Galeria de Imagenes-->
+        <section class="gallery" id="portafolio">
+            <div class="contenedor">
+                <h2 class="subtitulo">Galeria</h2>
+                <div class="contenedor-galeria">
+                    <img src="img/frase1.jpg" alt="" class="img-galeria">
+                    <img src="img/frase2.jpg" alt="" class="img-galeria">
+                    <img src="img/frase3.jpg" alt="" class="img-galeria">
+                    <img src="img/frase4.jpg" alt="" class="img-galeria">
+                    <img src="img/frase5.jpg" alt="" class="img-galeria">
+                    <img src="img/frase6.jpg" alt="" class="img-galeria">
+                </div>
+            </div>
+        </section>
+
+        <section class="imagen-light">
+            <img src="img/close.svg" alt="" class="close">
+            <img src="img/GodGetta.jpg" alt="" class="agregar-imagen">
+        </section>
+
+        <!--Contenido de Expertos-->
+        <section class="contenedor" id="expertos">
+            <h2 class="subtitulo">Expertos en:</h2>
+            <section class="experts">
+                <div class="cont-expert">
+                    <img src="img/filosofia1.jpg" alt="">
+                    <h3 class="n-expert">Albert Einstein</h3>
+                </div>
+                <div class="cont-expert">
+                    <img src="img/filosofia2.jpg" alt="">
+                    <h3 class="n-expert">Socrates</h3>
+                </div>
+                <div class="cont-expert">
+                    <img src="img/filosofia3.jpg" alt="">
+                    <h3 class="n-expert">Sofocles</h3>
+                </div>
+            </section>
+        </section>
+
+    </main>
+
+    <footer id="contacto">
+        <!--Contacto del desarrolador sus redes sociales e informacion-->
+        <div class="contenedor footer-content">
+            <div class="count-us">
+                <h2 class="brand">Pedro ING</h2>
+                <p>!***No Avandones Tus Sueños***¡</p>
+            </div>
+            <div class="social-media">
+                <a href="./" class="social-media-icon">
+                    <i class='bx bxl-facebook-circle'></i>
+                </a>
+                <a href="./" class="social-media-icon">
+                    <i class='bx bxl-twitter'></i>
+                </a>
+                <a href="./" class="social-media-icon">
+                    <i class='bx bxl-instagram-alt'></i>
+                </a>
+            </div>
+        </div>
+        <div class="line"></div>
+    </footer>
+
+    <!--Javascrip conexion-->
+    <script src="js/menu.js"></script>
+    <script src="js/lightbox.js"></script>
+
+</body>
+
+</html>

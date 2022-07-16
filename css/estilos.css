@@ -1,0 +1,414 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/***INICIO***/
+
+/*Esto es para que cuando seleccionesmos del menu el nombre de la acion aver
+nos posisione en ella sin la nesesidad de buscarla.*/
+:root {
+    scroll-behavior: smooth;
+}
+
+/*Fuente*/
+body {
+    font-family: 'Edu VIC WA NT Beginner', cursive;
+}
+
+/*Esto es para que todos los que tengan contenedor se centren es decir lo del contenido de la pagina se centre 
+y tenga entre cada seccion un espacio de 50px*/
+.contenedor {
+    width: 90%;
+    max-width: 1200px;
+    overflow: hidden;
+    margin: auto;
+    padding: 50px;
+}
+
+/*Este es el estilo que tendra el header es decir el fondo que tendra la priemera seccion
+la del menu por asi decirlo y la primera vista de la pagina.*/
+header {
+    height: 100vh;
+    background-image: linear-gradient(to top, rgba(125, 85, 219, 0.678) 0%,
+            rgba(226, 63, 63, 0.719) 100%), url(../img/GodGetta.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+/*Aqui es para acomodar el texto principal es decir el del contenedor head.*/
+.head {
+    text-align: center;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #fff;
+}
+
+/*Esto es para que el icono de menu que colocamos aparesca en la esquina derecha
+y siempre se vea en esa posicion.*/
+.hamburguer {
+    position: fixed;
+    top: 30px;
+    right: 30px;
+    background-color: #fff;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    border-radius: 10px;
+    box-shadow: 0 0 6px rgba(0, 0, 0, .5);
+}
+
+/*De esta forma el menu navegacion que creamos donde vienen todas las secciones pasara a 
+estar a la derecha con un diseño para que sea mas visible.*/
+.menu-navegacion {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 30vh;
+    height: 100%;
+    background-image: linear-gradient(120deg, rgb(104, 124, 238) 0%, #c2e9fb 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    /*Las 2 instruccion de abajo es para que sea desplegable pero solo cuando 
+    se programe con js.*/
+    transition: transform .3s ease-in-out;
+    transform: translate(110%);
+    box-shadow: 0 0 6px rgba(0, 0, 0, .5);
+}
+
+/*Esto es para cuando demos click en el icono nos aparesca nuevamente el menu 
+pero solo cuando se programe con js.*/
+.spread {
+    transform: translate(0);
+}
+
+/*Modificacion del texto.*/
+.menu-navegacion a {
+    color: #fff;
+    text-decoration: none;
+    font-size: x-large;
+}
+
+.tutulo {
+    font-size: 65px;
+    margin-bottom: 18px;
+}
+
+.copy {
+    font-weight: 300;
+    font-size: 30px;
+}
+
+/***Nuestro Servicio***/
+
+/*Todos los que tengan titulo se veran asi*/
+.subtitulo {
+    text-align: center;
+    font-weight: 300;
+    color: rgb(104, 124, 238);
+    margin-bottom: 40px;
+    font-size: 40px;
+}
+
+/*Modificacion del contenedor servicio.*/
+.contenedor-servicio {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.contenedor-servicio img {
+    width: 45%;
+}
+
+.checklist-servicios {
+    width: 50%;
+}
+
+.servicios {
+    margin-bottom: 20px;
+}
+
+.n-service {
+    margin-bottom: 7px;
+    color: rgb(104, 124, 238);
+}
+
+/*Para el numero que aparece antes del texto para que se vea bien*/
+.number {
+    display: inline-block;
+    background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+    width: 30px;
+    height: 30px;
+    color: #fff;
+    text-align: center;
+    border-radius: 50%;
+    font-weight: 700;
+    line-height: 30px;
+    margin-right: 5px;
+}
+
+/***GALERIA***/
+/*Para que se acomoden las imagenes como en una galerya y tenga un fondo para resaltar.*/
+.gallery {
+    background: #f2f2f2;
+}
+
+.contenedor-galeria {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.img-galeria {
+    width: 30%;
+    display: block;
+    margin-bottom: 15px;
+    box-shadow: 0 0 6px rgba(0, 0, 0, .5);
+    cursor: pointer;
+}
+
+/*Esto es para cuando se selleciona la imagen aparesca encima
+es decir se vea mas grande pero gran parte se realizara en js.*/
+.imagen-light {
+    position: fixed;
+    background: rgba(0, 0, 0, .6);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translate(100%);
+    transition: transform .2s ease-in-out;
+}
+
+.show {
+    transform: translate(0);
+}
+
+.agregar-imagen {
+    object-fit: cover;
+    width: 60%;
+    border-radius: 10px;
+    transform: scale(0);
+    transition: transform .3s .2s;
+}
+
+.shadowImage {
+    transform: scale(1);
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 40px;
+    cursor: pointer;
+}
+
+/***Expertos***/
+.experts {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.cont-expert {
+    width: 50%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.cont-expert img {
+    width: 80%;
+    height: 250px;
+    display: block;
+    margin: 0 auto;
+}
+
+.n-expert {
+    display: inline-block;
+    margin-top: 20px;
+    width: 100%;
+    font-size: 32px;
+    font-weight: 400;
+}
+
+/***FOOTER***/
+/*La parte final de la pagina web en este viene todo lo relacionado a los iconos
+y el nombre y datos del Desarrollador*/
+footer {
+    background: #9f8ad0;
+    padding-bottom: 0.1px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-top: 60px;
+    padding-bottom: 40px;
+}
+
+.contact-us {
+    width: 40%;
+    color: #fff;
+}
+
+.brand {
+    font-weight: 500;
+    font-size: 40px;
+}
+
+.brand+p {
+    font-weight: 500;
+}
+
+.social-media {
+    width: 40%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.social-media-icon {
+    display: inline-block;
+    margin-bottom: 20px;
+    width: 60px;
+    height: 60px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    text-align: center;
+    color: #fff;
+}
+
+.social-media-icon:hover {
+    background: #fff;
+    color: #764ba2;
+}
+
+.social-media-icon i {
+    font-size: 30px;
+    line-height: 60px;
+}
+
+.line {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 2px;
+    background: #fff;
+    margin-bottom: 60px;
+}
+
+/***Diseño Responsivo sirve para que se vea bien en los dispositivos
+mobiles se selleciona el tamaño desde el cual se veran los cambios o diferencias.***/
+
+@media screen and (max-width: 800px) {
+
+    /***MENU***/
+    .menu-navegacion {
+        width: 50vw;
+    }
+
+    .titulo {
+        font-size: 40px;
+    }
+
+    /***Nuestros Servicios***/
+    .contenedor-servicio img {
+        width: 80%;
+        margin-bottom: 40px;
+    }
+
+    .checklist-servicios {
+        width: 80%;
+    }
+
+    .servicios {
+        margin-bottom: 30px;
+    }
+
+    .agregar-imagen {
+        width: 80%;
+    }
+
+    /***GALERIA***/
+    .img-galeria {
+        width: 45%
+    }
+
+    /***Portafolio***/
+    .cont-expert {
+        width: 80%;
+    }
+
+    /***CONTACTANOS***/
+    .footer-content {
+        justify-content: center;
+    }
+
+    .social-media {
+        width: 80%;
+        justify-content: space-evenly;
+    }
+
+    .social-media i {
+        margin-left: 0;
+    }
+
+    .count-us {
+        text-align: center;
+        width: 80%;
+        margin-bottom: 40px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .menu-navegacion {
+        width: 65vw;
+    }
+
+    .hamburguer {
+        top: 20px;
+        right: 20px;
+    }
+
+    .titulo {
+        font-size: 30px;
+    }
+
+    .subtitulo {
+        font-size: 30px;
+    }
+
+    .agregar-imagen {
+        width: 95%;
+    }
+
+    .img-galeria {
+        width: 95%;
+    }
+
+    .cont-expert img {
+        width: 110%;
+        height: 170px;
+    }
+
+    .contact-us {
+        width: 90%;
+    }
+}
